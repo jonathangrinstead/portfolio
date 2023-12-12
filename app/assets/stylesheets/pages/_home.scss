@@ -1,1 +1,21 @@
 // Specific CSS for your home-page
+.header{
+  background-image: linear-gradient(60deg, #D62828, #FCBF49);
+  background-clip: text;
+  color: transparent;
+}
+
+a{
+  text-decoration: none;
+  color: $info;
+}
+
+a:hover{
+  color: $success;
+  transition: 0.3s;
+}
+
+img{
+  height: 180px;
+  width: 170px;
+}
