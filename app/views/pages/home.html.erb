@@ -9,10 +9,14 @@
       </div>
   </div>
 </div>
+
+<div class="content">
 <div class="row d-flex justify-content-center">
-  <div class="col-4">
+<div class=col-8>
+<div class="row">
+  <div class="col-6">
     <div class="card" style="height:20rem;">
-      <div class="card-body">
+      <div class="card-body info-section">
         <div class=" d-flex justify-content-center">
           <%= image_tag 'memoji.png'%>
         </div>
@@ -20,12 +24,109 @@
       </div>
     </div>
   </div>
-  <div class="col-4" >
+  <div class="col-6" >
     <div class="card" style="height:20rem;">
     </div>
   </div>
-  <div class="col-3" >
-    <div class="card" style="height:40rem;">
+</div>
+<div class="row pt-4">
+  <div class="col-4">
+  <div class="card small-card d-flex justify-content-center" style="height:20rem;">
+    <div class="text-center">
+      <h1 class="big-text">CV</h1>
     </div>
+  </div>
+  </div>
+  <div class="col-4">
+  <%= link_to "https://github.com/jonathangrinstead", target: :_blank do %>
+    <div class="card small-card d-flex justify-content-center" style="height:20rem;">
+      <div class="text-center">
+        <h1 class="logo"><i class="fa-brands fa-github fa-2xl" style="color: #000000;"></i></h1>
+      </div>
+    </div>
+  <% end %>
+  </div>
+  <div class="col-4">
+  <%= link_to "https://www.linkedin.com/in/jonathangrinstead/", target: :_blank do %>
+    <div class="card small-card d-flex justify-content-center" style="height:20rem;">
+      <div class="text-center">
+        <h1 class="logo"><i class="fa-brands fa-linkedin fa-2xl" style="color: #000000;"></i></h1>
+      </div>
+    </div>
+  <% end %>
+  </div>
+</div>
+</div>
+
+  <div class="col-3" >
+    <div class="card" style="height:41.5rem;">
+        <div class="d-flex justify-content-center pt-4 pb-2">
+          <h2 class="header">Tech Stack</h2>
+        </div>
+      <div class="card-body overflow-auto">
+        <div class="row d-flex justify-content-center">
+          <div class="col-12">
+            <div class="card p-3 m-2">
+              <div class="d-flex justify-content-between">
+                <%= image_tag 'ruby.png' %>
+                <h4 class="mt-2">Ruby</h4>
+              </div>
+            </div>
+            <div class="card p-3 m-2">
+              <div class="d-flex justify-content-between">
+                <%= image_tag 'rails.png' %>
+                <h4 class="mt-2">Rails</h4>
+              </div>
+            </div>
+            <div class="card p-3 m-2">
+              <div class="d-flex justify-content-between">
+                <%= image_tag 'javascript.png' %>
+                <h4 class="mt-2">JavaScript</h4>
+              </div>
+            </div>
+            <div class="card p-3 m-2">
+              <div class="d-flex justify-content-between">
+                <%= image_tag 'stimulus.png' %>
+                <h4 class="mt-2">Stimulus JS</h4>
+              </div>
+            </div>
+            <div class="card p-3 m-2">
+              <div class="d-flex justify-content-between">
+                <%= image_tag 'html.png' %>
+                <h4 class="mt-2">HTML</h4>
+              </div>
+            </div>
+            <div class="card p-3 m-2">
+              <div class="d-flex justify-content-between">
+                <%= image_tag 'css.png' %>
+                <h4 class="mt-2">CSS</h4>
+              </div>
+            </div>
+            <div class="card p-3 m-2">
+              <div class="d-flex justify-content-between">
+                <%= image_tag 'bootstrap.png' %>
+                <h4 class="mt-2">Bootstrap</h4>
+              </div>
+            </div>
+            <div class="card p-3 m-2">
+              <div class="d-flex justify-content-between">
+                <%= image_tag 'SQL.png' %>
+                <h4 class="mt-2">SQL</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<%# Footer  %>
+
+<div class="row d-flex justify-content-center mt-4">
+  <div class="col-11 d-flex justify-content-end">
+    <p class="header">Made with 🧡 by Jonathan Grinstead</p>
   </div>
 </div>
