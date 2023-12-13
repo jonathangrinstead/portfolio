@@ -41,6 +41,8 @@ img{
   background-image: linear-gradient(60deg, #D62828, #FCBF49);
   transition: 0.5s;
   border:0px;
+  cursor: pointer;
+  color: white;
 }
 
 .card {
@@ -73,5 +75,36 @@ img{
   background-color: #0077b5;
   .fa-linkedin{
     color: white !important;
+  }
+}
+
+.mapboxgl-ctrl-logo {
+  display: none !important;
+}
+
+.mapboxgl-marker{
+  img:hover{
+    transform: scale(3);
+    transition: 1s ease-out;
+  }
+  img:hover::after{
+    transition: 1s ease-in;
+  }
+}
+
+.modal-footer{
+  .btn-1{
+    background-color: black;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border: none;
+  }
+  .btn-2{
+    background-color: whitesmoke;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border: none;
+  }
+  .btn-2:hover{
+  background-image: linear-gradient(60deg, #D62828, #FCBF49);
+  transition: 0.5s;
   }
 }
