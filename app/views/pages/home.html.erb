@@ -1,18 +1,19 @@
+<div class="container">
 <%# Header  %>
 <div class="row d-flex justify-content-center mt-3">
-  <div class="col-11">
+  <div class="col-12">
       <div class="d-flex justify-content-between p-3">
         <div class="header">
         <h1>Jonathan Grinstead 👋</h1>
         <h6>Full-Stack Developer</h6>
         </div>
-        <h3 class="mt-2"><%= mail_to "jonathangrinstead.design@gmail.com", "Contact" %></h3>
+        <div class="mt-2 d-flex justify-content-between">
+        <h4 class="mx-3"><a href="#projects">Projects</a></h4>
+        <h4 ><%= mail_to "jonathangrinstead.design@gmail.com", "Contact" %></h4>
+        </div>
       </div>
   </div>
 </div>
-
-
-<div class="content">
 
 <%# My Info  %>
 
@@ -44,7 +45,7 @@
   </div>
   <div class="col-4">
   <%= link_to "https://github.com/jonathangrinstead", target: :_blank do %>
-    <div class="card small-card d-flex justify-content-center" style="height:20rem;">
+    <div class="card github d-flex justify-content-center" style="height:20rem;">
       <div class="text-center">
         <h1 class="logo"><i class="fa-brands fa-github fa-2xl" style="color: #000000;"></i></h1>
       </div>
@@ -53,7 +54,7 @@
   </div>
   <div class="col-4">
   <%= link_to "https://www.linkedin.com/in/jonathangrinstead/", target: :_blank do %>
-    <div class="card small-card d-flex justify-content-center" style="height:20rem;">
+    <div class="card linkedin d-flex justify-content-center" style="height:20rem;">
       <div class="text-center">
         <h1 class="logo"><i class="fa-brands fa-linkedin fa-2xl" style="color: #000000;"></i></h1>
       </div>
@@ -63,10 +64,10 @@
 </div>
 </div>
 
-  <div class="col-3" >
+  <div class="col-4" >
     <div class="card" style="height:41.5rem;">
         <div class="d-flex justify-content-center pt-4 pb-2">
-          <h2 class="header">Tech Stack</h2>
+          <h2>Tech Stack</h2>
         </div>
       <div class="card-body overflow-auto">
         <div class="row d-flex justify-content-center">
@@ -126,12 +127,31 @@
   </div>
 </div>
 
+  <%# Projects Area %>
+
+  <div class="row d-flex justify-content-center mt-4 mb-4 p-1">
+    <div class="col-12 d-flex justify-content-start">
+      <h1 class="header">Projects 🚀</h1>
+    </div>
+  </div>
+
+  <div class="row d-flex justify-content-center">
+    <div class="col-6">
+        <div class="card" style="height:30rem;">
+        </div>
+    </div>
+      <div class="col-6">
+        <div class="card" style="height:30rem;">
+        </div>
+      </div>
+  </div>
+
 </div>
 
 <%# Footer  %>
 
-<div class="row d-flex justify-content-center mt-4">
-  <div class="col-11 d-flex justify-content-end">
-    <p class="header">Made with 🧡 by Jonathan Grinstead</p>
+<div class="row d-flex justify-content-center mt-4 p-4">
+  <div class="col-12 d-flex justify-content-end">
+    <p class="header" id="projects">Made with 🧡 by Jonathan Grinstead</p>
   </div>
 </div>
