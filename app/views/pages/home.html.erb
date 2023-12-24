@@ -48,11 +48,13 @@
 
 <div class="row pt-4">
   <div class="col-4">
-  <div class="card small-card d-flex justify-content-center stretched-link" style="height:20rem;" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    <div class="text-center">
-      <h1 class="big-text">CV</h1>
-    </div>
-  </div>
+    <%= link_to asset_path("jonathan_grinstead_resume.pdf", skip_pipeline: true), target: :_blank do %>
+      <div class="card small-card d-flex justify-content-center" style="height:20rem;">
+        <div class="text-center">
+          <h1 class="big-text">CV</h1>
+        </div>
+      </div>
+    <% end %>
   </div>
   <div class="col-4">
   <%= link_to "https://github.com/jonathangrinstead", target: :_blank do %>
@@ -161,11 +163,17 @@
 
     <%# Weather Tab  %>
     <div class="col-3">
-      <div class="card justify-content-center text-center" style="height:20rem;" data-controller="weather">
-        <div data-weather-target="img"></div>
-        <h5 data-weather-target="description"></h5>
-        <h1 data-weather-target="temp"></h1>
-        <h4 data-weather-target="location"></h4>
+      <div class="card justify-content-center text-center" style="height:20rem; background-color:#add8e6;" data-controller="weather" >
+          <div data-weather-target="img"></div>
+          <h1 data-weather-target="temp"></h1>
+          <div class="d-inline-flex justify-content-center text-center">
+            <h6 data-weather-target="max" class="mx-2"></h6>
+            <h6 data-weather-target="min" class="mx-2"></h6>
+          </div>
+        <div class="card-body">
+          <h4 data-weather-target="location"></h4>
+          <h5 data-weather-target="description"></h5>
+        </div>
       </div>
     </div>
 
@@ -208,10 +216,6 @@
         </div>
       </div>
   </div>
-
-  <%# CV Modal %>
-
-  <%= render "cv_modal" %>
 
   <%# Footer  %>
 
