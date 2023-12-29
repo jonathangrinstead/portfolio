@@ -12,7 +12,7 @@ export default class extends Controller {
         const img = data.items[0].track.album.images[1].url
         const name = data.items[0].track.album.artists[0].name
         const song = data.items[0].track.name
-        this.imgTarget.innerHTML = `<img src="${img}" alt="artwork_img" style="width:150px; height:150px; border-radius:20px;">`
+        this.imgTarget.innerHTML = `<img src="${img}" alt="artwork_img" style="width:150px; height:150px; border-radius:20px; box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;">`
         this.nameTarget.innerText = name
         this.songTarget.innerText = song
     });
