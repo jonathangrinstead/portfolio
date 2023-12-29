@@ -154,14 +154,21 @@
 
     <%# Music Tab  %>
     <div class="col-3">
-      <div class="card" style="height:20rem;">
-        <div data-controller="music"
-        data-music-client-value= "<%= ENV['CLIENT_ID'] %>"
-        data-music-client-secret-value= "<%= ENV['CLIENT_SECRET'] %>"
-        >
-        </div>
-          Music API
-        </div>
+      <div class="card d-flex justify content-center" style="height:20rem;"data-controller="music"data-music-auth-token-value="<%= @token %>">
+          <div class="card-body">
+            <div class="d-flex justify-content-between p-2">
+              <div data-music-target="img"></div>
+              <div>
+                <i class="fa-brands fa-spotify fa-2xl mt-4" style="color: #1ed760;"></i>
+              </div>
+            </div>
+            <div class="m-3">
+              <h6>Recently Played:</h6>
+              <h4 data-music-target="name"></h4>
+              <h6 data-music-target="song"></h6>
+            </div>
+          </div>
+      </div>
     </div>
 
     <%# Weather Tab  %>
