@@ -2,10 +2,9 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="music"
 export default class extends Controller {
-  static values = { authToken: String }
   static targets = ["img", "name", "song"]
   connect() {
-    const headers = {'Authorization': `Bearer ${this.authTokenValue}`};
+    const headers = {'Authorization': `Bearer ${gon.token}`};
     fetch('https://api.spotify.com/v1/me/player/recently-played', {headers})
       .then(response => response.json ())
       .then ((data) => {

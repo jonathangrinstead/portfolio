@@ -14,6 +14,7 @@ class PagesController < ApplicationController
         refresh_token: ENV['REFRESH_TOKEN'],
       }
     )
-    @token = response['access_token']
+    token = response['access_token']
+    gon.token = token
   end
 end
