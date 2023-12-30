@@ -224,14 +224,37 @@
   </div>
 
   <div class="row d-flex justify-content-center">
+
     <div class="col-6">
         <div class="card" style="height:30rem;">
+          <div class="card-body text-center mt-3">
+            <div>
+              <h3>League-All</h3>
+            </div>
+            <div class="carousel-container 300-px-wide mt-2">
+              <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="<%= asset_path('league_all_signed_in.png') %>" class="d-block w-100" alt="League-All Homepage" style="width: 100%; height: auto; border-radius: 20px;">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="<%= asset_path('league_all_team_dashboard.png') %>" class="d-block w-100" alt="League-All Team Dashboard" style="width: 100%; height: auto;  border-radius: 20px;">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="<%= asset_path('league_all_messages.png') %>" class="d-block w-100" alt="League-All Team Messages" style="width: 100%; height: auto;  border-radius: 20px;">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
     </div>
+
       <div class="col-6">
         <div class="card" style="height:30rem;">
         </div>
       </div>
+
   </div>
 
   <%# Footer  %>
