@@ -43,3 +43,10 @@ $spotify-green: #1db954;
 .music-bar:nth-child(3) {
   @include music-bars-animation(2em, 1.2s, 0.3s); // Adjusted duration and delay
 }
+
+
+.artist-name{
+  a:hover{
+  color: #1db954 !important;
+  }
+}
