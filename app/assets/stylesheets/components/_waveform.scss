@@ -1,0 +1,45 @@
+// Variables
+$spotify-green: #1db954;
+
+// Animation Mixin
+@mixin music-bars-animation($height, $duration, $delay) {
+  height: $height;
+  animation: bounce $duration infinite alternate $delay;
+}
+
+// Keyframes
+@keyframes bounce {
+  0%, 100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0.6); // Adjusted scale down to 70% of original height
+  }
+}
+
+// Styles
+.music-container {
+  display: flex;
+  align-items: center;
+}
+
+.music-bars {
+  display: flex;
+}
+
+.music-bar {
+  width: 8px; // Slightly smaller width
+  height: 2em; // Set the height to match the "Now Playing" h6 tag
+  background-color: $spotify-green;
+  margin-right: 3px; // Reduced spacing
+  border-radius: 5px;
+  @include music-bars-animation(2em, 1.2s, 0.1s); // Slower animation
+}
+
+.music-bar:nth-child(2) {
+  @include music-bars-animation(2em, 1.2s, 0.2s); // Adjusted duration and delay
+}
+
+.music-bar:nth-child(3) {
+  @include music-bars-animation(2em, 1.2s, 0.3s); // Adjusted duration and delay
+}
