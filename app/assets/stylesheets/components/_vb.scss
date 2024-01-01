@@ -1,0 +1,39 @@
+.vb-header {
+  background: linear-gradient(60deg, #FD1015, #0E0000);
+  background-clip: text;
+  color: transparent;
+  font-family: 'NeueMachina', serif;
+}
+
+.gradient-button2 {
+  background: linear-gradient(60deg, #FD1015, #0E0000);
+  border: none;
+  color: white;
+  padding: 15px; /* Uniform padding for a circle */
+  width: 50px; /* Width and height are the same for a perfect circle */
+  height: 50px;
+  border-radius: 50%; /* This makes the button round */
+  cursor: pointer;
+  transition: transform 0.4s, background 0.4s; /* Smooth transition for hover effect */
+  font-family: Arial, sans-serif;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  outline: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.gradient-button2 i {
+  transition: transform 0.4s; /* Smooth transition for the icon */
+}
+
+.gradient-button2:hover {
+  transform: scale(1.1); /* Slightly increase the size of the button */
+  background: linear-gradient(120deg, #FD1015, #0E0000); /* Change the gradient direction */
+}
+
+.gradient-button2:active {
+  transform: scale(0.9); /* Slightly scale down the button when clicked */
+}
