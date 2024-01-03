@@ -2,9 +2,21 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="dark-mode"
 export default class extends Controller {
+  connect() {
+    if (localStorage.getItem("darkMode") === "true") {
+      this.applyDarkMode(true);
+    }
+  }
+
   toggle() {
-    document.body.classList.toggle("dark-mode");
-    this.element.classList.toggle("fa-sun");
-    this.element.classList.toggle("fa-moon");
+    const isDarkMode = !document.body.classList.contains("dark-mode");
+    this.applyDarkMode(isDarkMode);
+    localStorage.setItem("darkMode", isDarkMode);
+  }
+
+  applyDarkMode(enable) {
+    document.body.classList.toggle("dark-mode", enable);
+    this.element.classList.toggle("fa-sun", !enable);
+    this.element.classList.toggle("fa-moon", enable);
   }
 }
