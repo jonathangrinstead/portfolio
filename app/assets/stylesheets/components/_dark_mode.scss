@@ -1,0 +1,40 @@
+.dark-mode {
+  background-color: #171738;
+  color: white;
+}
+.dark-mode .card {
+  background-color: #2E1760;
+  color:white;
+  border: 2px solid #3B27B9;
+}
+
+.dark-mode a{
+  color: white;
+}
+
+.dark-mode body{
+  color: white;
+}
+
+.dark-mode i{
+  color: white !important;
+}
+
+.dark-mode .fa,
+.dark-mode .fas,
+.dark-mode .far,
+.dark-mode .fab {
+  color: white !important;;
+}
+
+.dark-mode .modal-body{
+  background-color: #171738;
+}
+
+.dark-mode .modal-content{
+  background-color: #171738;
+}
+
+.dark-mode .btn-close{
+  color: white !important;
+}
