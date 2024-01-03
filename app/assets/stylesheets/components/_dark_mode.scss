@@ -1,3 +1,7 @@
+.dark-mode-toggle-icon {
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
 .dark-mode {
   background-color: #171738;
   color: white;

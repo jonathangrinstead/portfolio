@@ -10,9 +10,16 @@ export default class extends Controller {
 
   toggle() {
     const isDarkMode = !document.body.classList.contains("dark-mode");
+
+    setTimeout(() => {
+      this.element.classList.toggle("fa-sun", !isDarkMode);
+      this.element.classList.toggle("fa-moon", isDarkMode);
+    }, 150);
+
     this.applyDarkMode(isDarkMode);
     localStorage.setItem("darkMode", isDarkMode);
   }
+
 
   applyDarkMode(enable) {
     document.body.classList.toggle("dark-mode", enable);
