@@ -9,11 +9,12 @@ export default class extends Controller {
   }
 
   connect() {
-    mapboxgl.accessToken = this.apiKeyValue
+    mapboxgl.accessToken = this.apiKeyValue;
+    const style = "mapbox://styles/jonathangrinstead1997/clqmsv49z00rd01nwaqsu9ipc";
 
     this.map = new mapboxgl.Map({
       container: this.element,
-      style: "mapbox://styles/jonathangrinstead1997/clqmsv49z00rd01nwaqsu9ipc"
+      style: style
     })
     this.#addMarkersToMap()
     this.#fitMapToMarkers()

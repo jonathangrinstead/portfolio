@@ -10,7 +10,9 @@
         <div class="mt-2 d-flex justify-content-around">
         <h4 class="mx-3"><a href="#projects" data-action="click->smooth-scroll#scrollToTarget">Projects</a></h4>
         <h4 ><%= mail_to "jonathangrinstead.design@gmail.com", "Contact" %></h4>
-        <i class="fa-solid fa-sun fa-xl mt-2 mx-4 dark-mode-toggle-icon" style="color: #000000;" data-controller="dark-mode" data-action="click->dark-mode#toggle"></i>
+        <button class="gradient-button3 mx-4">
+          <i class="fa-solid fa-sun fa-xl dark-mode-toggle-icon" style="color: #000000;" data-controller="dark-mode" data-action="click->dark-mode#toggle"></i>
+        </button>
         </div>
       </div>
   </div>
@@ -181,7 +183,7 @@
 
     <%# Weather Tab  %>
     <div class="col-3">
-      <div class="card justify-content-center text-center" style="height:20rem; background-color:#add8e6;" data-controller="weather"  data-weather-api-key-value="<%= ENV['WEATHER_API_KEY'] %>">
+      <div class="card weather-card justify-content-center text-center" style="height:20rem; background-color:#add8e6;" data-controller="weather"  data-weather-api-key-value="<%= ENV['WEATHER_API_KEY'] %>">
           <div data-weather-target="img"></div>
           <h1 data-weather-target="temp"></h1>
           <div class="d-inline-flex justify-content-center text-center">
@@ -209,7 +211,9 @@
         </div>
       </div>
         <div class="d-flex justify-content-end mt-3">
-          <i class="fa-solid fa-arrows-rotate fa-2xl quote-icon mt-4" style="color: #000000;" data-action="click->quotes#refresh"></i>
+          <button class="gradient-button3">
+            <i class="fa-solid fa-arrows-rotate fa-xl quote-icon" style="color: #000000;" data-action="click->quotes#refresh"></i>
+          </button>
         </div>
       </div>
     </div>
@@ -250,12 +254,12 @@
               </div>
             </div>
             <div class="d-flex justify-content-between m-4">
-              <button class="gradient-button1" data-bs-toggle="modal" data-bs-target="#laModal">
+              <button class="gradient-button3" data-bs-toggle="modal" data-bs-target="#laModal">
                 <i class="fa-solid fa-arrow-up-right-from-square fa-xl"></i>
               </button>
               <%= link_to "https://github.com/zeinaaabbb/League-all", target: :_blank do%>
-                <button class="gradient-button1">
-                <i class="fa-brands fa-github fa-2xl"></i>
+                <button class="gradient-button3">
+                <i class="fa-brands fa-github fa-xl"></i>
                 </button>
               <% end %>
             </div>
@@ -287,12 +291,12 @@
               </div>
             </div>
             <div class="d-flex justify-content-between m-4">
-              <button class="gradient-button2" data-bs-toggle="modal" data-bs-target="#vbModal">
+              <button class="gradient-button3" data-bs-toggle="modal" data-bs-target="#vbModal">
                 <i class="fa-solid fa-arrow-up-right-from-square fa-xl"></i>
               </button>
               <%= link_to "https://github.com/crudengold/-venuebookr", target: :_blank do%>
-                <button class="gradient-button2">
-                <i class="fa-brands fa-github fa-2xl"></i>
+                <button class="gradient-button3">
+                <i class="fa-brands fa-github fa-xl"></i>
                 </button>
               <% end %>
             </div>
