@@ -6,6 +6,10 @@
   font-family: 'NeueMachina', serif;
 }
 
+body{
+  background-color: F7EFE5;
+}
+
 .fa-sun:hover{
   cursor: pointer;
 }
@@ -60,6 +64,7 @@ img{
   transition: all 0.4s;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border: 0px;
+  background-color: #FFFBF5;
 }
 
 .card:hover {
