@@ -27,9 +27,9 @@
 <%# My Info  %>
 
 <div class="row d-flex justify-content-center">
-<div class=col-8>
+<div class="col-12 col-md-8 mt-2">
   <div class="row">
-    <div class="col-6">
+    <div class="col-12 col-md-6 mt-2">
       <div class="card" style="height:20rem;">
         <div class="card-body info-section">
           <div class=" d-flex justify-content-center">
@@ -44,7 +44,7 @@
 
   <%# MAP  %>
 
-  <div class="col-6">
+  <div class="col-12 col-md-6 mt-2">
     <div class="map" style="width: 100%; height: 100%; border-radius:20px; box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;"
       data-controller="map"
       data-map-markers-value="<%= @markers.to_json %>"
@@ -56,14 +56,14 @@
 
 
 <div class="row pt-4">
-  <div class="col-4">
+  <div class="col-12 col-md-4 mt-2">
     <%= link_to asset_path("jonathan_grinstead_resume.pdf", skip_pipeline: true), target: :_blank do %>
       <div class="card small-card d-flex justify-content-center text-center" style="height:20rem;">
           <h1 class="big-text pt-2">CV</h1>
       </div>
     <% end %>
   </div>
-  <div class="col-4">
+  <div class="col-12 col-md-4 mt-2">
   <%= link_to "https://github.com/jonathangrinstead", target: :_blank do %>
     <div class="card github d-flex justify-content-center" style="height:20rem;">
       <div class="text-center">
@@ -72,7 +72,7 @@
     </div>
   <% end %>
   </div>
-  <div class="col-4">
+  <div class="col-12 col-md-4 mt-2">
   <%= link_to "https://www.linkedin.com/in/jonathangrinstead/", target: :_blank do %>
     <div class="card linkedin d-flex justify-content-center" style="height:20rem;">
       <div class="text-center">
@@ -84,7 +84,7 @@
 </div>
 </div>
 
-  <div class="col-4" >
+  <div class="col-12 col-md-4 mt-3" >
     <div class="card" style="height:41.5rem;">
         <div class="d-flex justify-content-center pt-4 pb-2">
           <h2>Tech Stack</h2>
@@ -162,7 +162,7 @@
   <div class="row justify-content-center pt-4">
 
     <%# Music Tab  %>
-    <div class="col-3">
+    <div class="col-12 col-md-3 mt-2">
       <div class="card d-flex justify content-center" style="height:20rem;"data-controller="music">
           <div class="card-body">
             <div class="d-flex justify-content-between p-2">
@@ -188,7 +188,7 @@
           </div>
 
     <%# Weather Tab  %>
-    <div class="col-3">
+    <div class="col-12 col-md-3 mt-2">
       <div class="card weather-card justify-content-center text-center" style="height:20rem; background-color:#add8e6;" data-controller="weather"  data-weather-api-key-value="<%= ENV['WEATHER_API_KEY'] %>">
           <div data-weather-target="img"></div>
           <h1 data-weather-target="temp"></h1>
@@ -204,7 +204,7 @@
     </div>
 
     <%# Quotes Tab %>
-    <div class="col-6" >
+    <div class="col-12 col-md-6 mt-2" >
       <div class="card align-items-center" style="height:20rem;" data-controller="quotes">
       <div class="card d-flex justify-content-center mt-4" style="height: 13rem; width:34rem;">
         <div class="card-body mt-2 mx-4 mb-3 overflow-auto" style="height:15rem">
@@ -238,7 +238,7 @@
 
     <%# League-All %>
 
-    <div class="col-6">
+    <div class="col-12 col-md-6 mt-2">
         <div class="card" style="height:35rem;">
           <div class="card-body text-center mt-2">
             <div class="d-inline-flex mb-2">
@@ -275,7 +275,7 @@
 
     <%# VenueBookr %>
 
-    <div class="col-6">
+    <div class="col-12 col-md-6 mt-2">
       <div class="card" style="height:35rem;">
       <div class="card-body text-center mt-2">
         <div class="d-inline-flex mb-2">
