@@ -25,3 +25,11 @@ $border-radius-sm: 5px;
 
 // Override other variables below!
 $btn-close-width:            2em;
+
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 1200px,
+);
