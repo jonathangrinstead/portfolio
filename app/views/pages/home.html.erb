@@ -356,29 +356,29 @@
       <div class="card">
       <div class="card-body text-center mt-2">
         <div class="d-inline-flex mb-2">
-          <h2>VenueBookr</h2>
+          <h2>Feast</h2>
           </div>
             <div class="carousel-container 300-px-wide">
               <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <img src="<%= asset_path('venuebookr_homepage.png') %>" class="d-block w-100" alt="League-All Homepage" style="width: 100%; height: auto; border-radius: 20px;">
+                    <img src="<%= asset_path('fullscreen_feast1.png') %>" class="d-block w-100" alt="League-All Homepage" style="width: 100%; height: auto; border-radius: 20px;">
                   </div>
                   <div class="carousel-item">
-                    <img src="<%= asset_path('venuebookr_save_venue.png') %>" class="d-block w-100" alt="League-All Team Dashboard" style="width: 100%; height: auto;  border-radius: 20px;">
+                    <img src="<%= asset_path('fullscreen_feast2.png') %>" class="d-block w-100" alt="League-All Team Dashboard" style="width: 100%; height: auto;  border-radius: 20px;">
                   </div>
                   <div class="carousel-item">
-                    <img src="<%= asset_path('venuebookr_booked.png') %>" class="d-block w-100" alt="League-All Team Messages" style="width: 100%; height: auto;  border-radius: 20px;">
+                    <img src="<%= asset_path('fullscreen_feast3.png') %>" class="d-block w-100" alt="League-All Team Messages" style="width: 100%; height: auto;  border-radius: 20px;">
                   </div>
                 </div>
               </div>
             </div>
             <div class="d-flex justify-content-between m-4">
-              <button class="gradient-button3" data-bs-toggle="modal" data-bs-target="#vbModal" aria-label="VenueBookr More Info">
+              <button class="gradient-button3" data-bs-toggle="modal" data-bs-target="#feastModal" aria-label="Feast More Info">
                 <i class="fa-solid fa-arrow-up-right-from-square fa-xl" style="color: #000000;"></i>
               </button>
-              <%= link_to "https://github.com/crudengold/-venuebookr", target: :_blank do%>
-                <button class="gradient-button3" aria-label="VenueBookr Github">
+              <%= link_to "https://github.com/jonathangrinstead/feast", target: :_blank do%>
+                <button class="gradient-button3" aria-label="Feast Github">
                 <i class="fa-brands fa-github fa-xl" style="color: #000000;"></i>
                 </button>
               <% end %>
@@ -393,6 +393,7 @@
   <%= render "la_modal" %>
   <%= render "vb_modal" %>
   <%= render "ls_modal" %>
+  <%= render "feast_modal" %>
 
   <%# Footer  %>
 
