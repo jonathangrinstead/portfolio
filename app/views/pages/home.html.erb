@@ -16,11 +16,11 @@
           <button class="gradient-button3" data-action="click->smooth-scroll#scrollToTarget" aria-label="Projects">
             <a href="#projects" style="color: inherit; text-decoration: none;" aria-label="Projects"><i class="fa-brands fa-space-awesome fa-xl" style="color: #000000;"></i></a>
           </button>
-          <%= mail_to "jonathangrinstead.design@gmail.com" do %>
-          <button class="gradient-button3" aria-label="Email Me">
-            <i class="fa-solid fa-envelope fa-xl" style="color: #000000;"></i>
-          </button>
-          <% end %>
+          <a href="#contact" style="color: inherit; text-decoration: none;" aria-label="Contact Me">
+            <button class="gradient-button3" aria-label="Contact Me">
+              <i class="fa-solid fa-envelope fa-xl" style="color: #000000;"></i>
+            </button>
+          </a>
           <button class="gradient-button3" aria-label="Dark-mode/Light-mode Toggle">
             <i class="fa-solid fa-sun fa-xl dark-mode-toggle-icon" style="color: #000000;" data-controller="dark-mode" data-action="click->dark-mode#toggle"></i>
           </button>
@@ -432,6 +432,65 @@
       </div>
     </div>
 
+    <div class="row d-flex justify-content-center mt-4 mb-4 p-1" id="contact">
+    <div class="col-12 d-flex justify-content-start mt-2">
+      <h1 class="header mx-2">Contact Me 📩</h1>
+    </div>
+    </div>
+
+    <div class="col-12 col-lg-6 mb-4">
+      <div class="card h-100">
+        <div class="card-body text-center">
+          <%= form_for Contact.new, 
+              data: { 
+                controller: "contact-form",
+                action: "submit->contact-form#submit",
+                contact_form_target: "form",
+                contact_form_loading_class: "loading",
+                contact_form_success_class: "success"
+              },
+              class: "w-100" do |f| %>
+            
+            <div data-contact-form-target="formContent" class="form-content">
+              
+              <div class="mb-3">
+                <%= f.label :name, class: "form-label" %>
+                <%= f.text_field :name, class: "form-control", required: true %>
+              </div>
+
+              <div class="mb-3">
+                <%= f.label :email, class: "form-label" %>
+                <%= f.email_field :email, class: "form-control", required: true %>
+              </div>
+
+              <div class="mb-3">
+                <%= f.label :message, class: "form-label" %>
+                <%= f.text_area :message, class: "form-control", rows: 5, required: true %>
+              </div>
+
+              <div class="text-center">
+                <%= button_tag class: "gradient-button3", 
+                    data: { contact_form_target: "submitButton" } do %>
+                  <i class="fa-solid fa-paper-plane fa-xl" style="color: #000000;"></i>
+                <% end %>
+              </div>
+            </div>
+
+            <div class="success-message d-none position-absolute top-50 start-50 translate-middle w-100" data-contact-form-target="successMessage">
+              <div class="success-content text-center">
+                <div class="success-icon">
+                  <i class="fa-solid fa-check fa-2xl" style="color: #00b09b; font-weight: 900; font-size: 150px;"></i>
+                </div>
+                <div class="success-text mt-4">
+                  <h3>Message Sent!</h3>
+                  <p>Thank you for reaching out!</p>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
 
   </div>
 
