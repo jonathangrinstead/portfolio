@@ -78,3 +78,7 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+gem 'mail_form'
+
+gem 'sendgrid-ruby'
