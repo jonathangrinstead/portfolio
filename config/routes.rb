@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   resources :contacts, only: [:create]
+  get 'carbon_calculator_privacy_policy', to: 'pages#carbon_calculator_privacy_policy'
 end
