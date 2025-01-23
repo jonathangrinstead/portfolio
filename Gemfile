@@ -82,3 +82,5 @@ end
 gem 'mail_form'
 
 gem 'sendgrid-ruby'
+
+gem 'recaptcha'

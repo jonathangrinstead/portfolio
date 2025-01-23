@@ -1,36 +1,40 @@
 class ContactsController < ApplicationController
   def create
-    @contact = Contact.new(contact_params)
-    begin
-      Rails.logger.info("Attempting to deliver email...")
-      if @contact.deliver
-        Rails.logger.info("Email delivered successfully!")
-        respond_to do |format|
-          format.html { 
-            flash[:success] = "Thank you for your message!"
-            redirect_to root_path 
-          }
-          format.json { render json: { status: 'success' }, status: :ok }
+    if verify_recaptcha
+      @contact = Contact.new(contact_params)
+      begin
+        Rails.logger.info("Attempting to deliver email...")
+        if @contact.deliver
+          Rails.logger.info("Email delivered successfully!")
+          respond_to do |format|
+            format.html { 
+              flash[:success] = "Thank you for your message!"
+              redirect_to root_path 
+            }
+            format.json { render json: { status: 'success' }, status: :ok }
+          end
+        else
+          Rails.logger.error("Email delivery failed")
+          respond_to do |format|
+            format.html {
+              flash[:error] = "Cannot send message."
+              redirect_to root_path
+            }
+            format.json { render json: { status: 'error' }, status: :unprocessable_entity }
+          end
         end
-      else
-        Rails.logger.error("Email delivery failed")
+      rescue StandardError => e
+        Rails.logger.error("Email error: #{e.message}")
         respond_to do |format|
           format.html {
-            flash[:error] = "Cannot send message."
+            flash[:error] = "An error occurred while sending the message."
             redirect_to root_path
           }
-          format.json { render json: { status: 'error' }, status: :unprocessable_entity }
+          format.json { render json: { status: 'error' }, status: :internal_server_error }
         end
       end
-    rescue StandardError => e
-      Rails.logger.error("Email error: #{e.message}")
-      respond_to do |format|
-        format.html {
-          flash[:error] = "An error occurred while sending the message."
-          redirect_to root_path
-        }
-        format.json { render json: { status: 'error' }, status: :internal_server_error }
-      end
+    else
+      render json: { status: 'error', message: 'reCAPTCHA verification failed' }, status: 422
     end
   end
 

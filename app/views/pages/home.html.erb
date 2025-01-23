@@ -468,6 +468,11 @@
                 <%= f.text_area :message, class: "form-control", rows: 5, required: true %>
               </div>
 
+              <%# Add recaptcha here, before the submit button %>
+              <div class="mb-3 d-flex justify-content-center">
+                <%= recaptcha_tags site_key: ENV['RECAPTCHA_SITE_KEY'] %>
+              </div>
+
               <div class="text-center">
                 <%= button_tag class: "gradient-button3", 
                     data: { contact_form_target: "submitButton" } do %>

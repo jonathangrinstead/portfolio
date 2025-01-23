@@ -15,18 +15,28 @@ export default class extends Controller {
     event.preventDefault()
     if (this.isSubmitting) return
 
+    // Verify reCAPTCHA first
+    const recaptchaResponse = grecaptcha.getResponse()
+    if (!recaptchaResponse) {
+      alert("Please complete the reCAPTCHA verification")
+      return
+    }
+
     this.isSubmitting = true
     this.formContentTarget.classList.add('fade-out')
     this.submitButtonTarget.classList.add(this.loadingClass)
 
     try {
+      const formData = new FormData(this.formTarget)
+      formData.append('g-recaptcha-response', recaptchaResponse)
+
       const response = await fetch(this.formTarget.action, {
         method: 'POST',
         headers: {
           'Accept': 'application/json',
           'X-CSRF-Token': document.querySelector("[name='csrf-token']").content
         },
-        body: new FormData(this.formTarget)
+        body: formData
       })
 
       if (response.ok) {
